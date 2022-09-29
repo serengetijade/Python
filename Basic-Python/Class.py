@@ -1,5 +1,6 @@
 #CLASS BASICS
 
+"""
 #DEFINE A CLASS WITH ARGUMENTS
 class className:
     #Define the attributes of the class
@@ -18,10 +19,10 @@ class className:
             print("You shall not pass!!!!");
 
 #Create a class instance
-new_user = className();
+instanceName= className();
 
 #Call the login method using the new object
-new_user.login();
+instanceName.login();
 
 #DEFINE A CLASS WITH __init__
 #First, define a class as you would above.
@@ -69,8 +70,99 @@ class className3:
     attribute1 = "Hello"
     attribute2 = "World!";
 
-
 if __name__ == "__main__":
     x = className3()        #Instantiate the class and name this instance
     print(x.attribute1+"!")
     print("{} {}".format(x.attribute1, x.attribute2))
+
+"""
+
+##CHILD CLASS POLYMORPHISM
+#parent class
+class Organism:
+    name = "Unknown"
+    species = "Unknown"
+    legs = None
+    arms = None             #Data type is "nothing"
+    dna = "Sequence A"
+    origin = "Unknown"
+    carbon_based = True     #boolean value
+
+    def information(self):  #self is a keyword
+        message = "\nName: {}\nSpecies: {}\nLegs: {}\nArms: {}\nDNA: {}\nOrigin: {}\nCarbon Based: {}".format(self.name, self.species, self.legs, self.arms, self.dna, self.origin, self.carbon_based)
+        return message;
+
+#child class #1
+class Human(Organism):      #inherit the parent class: (parentName)
+    name = "MacGuyver"
+    species = "Homo Sapien"
+    legs = 2
+    arms = 2
+    origin = "Earth"
+    lifespan = "Long-lived"
+    population_status = "One of a Kind"
+
+    def addMessage(self):
+        message = "Lifespan: {}\nPopulation Status: {}".format(self.lifespan, self.population_status)
+        return message;
+
+    def ingenuity(self):   #a method of this class
+        message = "\nCreate a deadly weapon using only a paper clip, chewing gum, and a roll of duct tape!"
+        return message;
+    
+#child class #2    
+class Dog(Organism):
+    name = "Spot"
+    species = "Canine"
+    legs = 4
+    arms = 0
+    dna = "Sequence B"
+    origin = "Earth"
+    weakness = "Treats"     #can add additonal attributes to children
+    special_ability = "Cuteness"
+
+    def addMessage(self):
+        message = "Weakness: {}\nSpecial Ability: {}".format(self.weakness, self.special_ability)
+        return message;
+        
+    def bite(self):
+        message = "\nEmit a loud, menacing growl and bite down ferociously on target."
+        return message;
+
+#child class #3
+class Virus(Organism):
+    name = "SARS-CoV-2"
+    species = "Virus"
+    legs = 0
+    arms = 0
+    dna = "Sequence C"
+    origin = "Mars"
+    cure = "TBD"
+    target = "Homo sapiens"
+
+    def addMessage(self):
+        message = "Cure: {}\nTarget: {}".format(self.cure, self.target)
+        return message;
+    def replication(self):
+        message = "\nThe virus is highly contagious and can pass via airborn particles."
+        return message;
+    
+#instantiate objects
+if __name__ == "__main__":
+    #pass                  #run nothing
+    human = Human();        #instantiate Human() and give in the name 'human'
+    print(human.information());
+    print(human.addMessage());
+    print(human.ingenuity());
+
+    dog = Dog();
+    print(dog.information());
+    print(dog.addMessage());
+    print(dog.bite());
+    
+    virus = Virus();
+    print(virus.information());
+    print(virus.addMessage());
+    print(virus.replication());
+        
+
