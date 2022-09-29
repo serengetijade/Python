@@ -54,14 +54,13 @@ newInstance2 = className2("attribute0value", "attribute1value", "attribute2value
 #Call the login method using the new object
 newInstance2.login();
 
-"""
 #ADD A CHILD CLASS
 class childClassName1(className):
     attribute4_1 = "value"      #added attributes are unique to this "child" class
     attribute5_1 = True
     
 class childClassName2(className):
-    attribute4_2 = variableName     #added attributes are unique to this "child" class
+    attribute4_2 = "value"     #added attributes are unique to this "child" class
     attribute5_2 = 11
 
 
@@ -73,7 +72,5 @@ class className3:
 
 if __name__ == "__main__":
     x = className3()        #Instantiate the class and name this instance
-    print(x.attribute1)
-    print(x.attribute2)
+    print(x.attribute1+"!")
     print("{} {}".format(x.attribute1, x.attribute2))
-"""
