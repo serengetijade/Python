@@ -6,7 +6,7 @@ class ClassName0:                               #start Class Names with a Capita
         self.variableB = attributeB             #Create “variableA” and “variableB” to pass whatever value is later defined to parameterA/B
     #refer to the (future TBD) parameters as the variables defined above
     def classMethod(abc):                       #In a function definition, name only one parameter
-        print("Hello my name is " + abc.variableA)  #Call multiple parameters by referencing the (variables) name as defined in the Class definition
+        print("Hello " + abc.variableA)         #Call multiple parameters by referencing the (variables) name as defined in the Class definition
 
 
 instance1 = ClassName0("Jade", "attributeB")    #Create an instance and pass in the parameter value(s)
