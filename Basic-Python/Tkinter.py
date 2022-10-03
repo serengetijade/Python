@@ -19,7 +19,7 @@ from tkinter import *
 print(tkinter.Tcl().eval('info patchlevel'));   #see your version of tkinter
 
 class ClassName(Frame):             #Frame is the Tkinter keyword to declare a parent class
-    def __init__(self, master):     #Declaring 'self' allows us to you the self method; so then 'master' is the (variable)name for this class, which is the parent class
+    def __init__(self, master):     #Declaring 'self' names this class as 'self', which is then used to refrence this instance of this class (itself); so then 'master' is keyword to identify this as the parent class
         Frame.__init__(self);
         self.master = master;        #Create a varaible “master” to pass whatever value is later defined to parameter "master"
         #function statements:
