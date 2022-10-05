@@ -1,3 +1,19 @@
+#Python Version: 3.10.7
+#
+#Author:        Jade Abreu
+#
+#Purpose:       Tkinter Tutorial 1:
+#               -Use user input from and Entry widget as a variable in another function
+#                   -Define a variable type
+#                   -Within the widget, use the option 'text=theVariablesName'
+#                   -Declare another varaible to .get(theVariablesName) value
+#                   -Note that variable definitions must be local, but you can call on any widget by: className.widgetName.get()
+#               -Assign command option to Buttons
+#               -Change a widget with .configure/.config method
+#               The code is heavily noted to serve as future tutorials.
+#
+#Tested OS:     This code was written and tested to work with Windows 11.
+
 ##__init__ and SELF FUNCTION REVIEW
 #Example1
 class ClassName0:                               #start Class Names with a Capital Letter
@@ -18,9 +34,9 @@ import tkinter;
 from tkinter import *
 print(tkinter.Tcl().eval('info patchlevel'));   #see your version of tkinter
 
-class ClassName(Frame):             #Frame is the Tkinter keyword to declare a parent class
+class ClassName(Frame):             #Declare a class and pass in that it is a Frame widget. Frame is a widget to hold other widgets.
     def __init__(self, master):     #Declaring 'self' names this class as 'self', which is then used to refrence this instance of this class (itself); so then 'master' is keyword to identify this as the parent class
-        Frame.__init__(self);
+        Frame.__init__(self);       #Initialize Frame widget. (self) declares that it belongs to the class 'self', the name of the Parent Class as defined in the line above.
         self.master = master;        #Create a varaible “master” to pass whatever value is later defined to parameter "master"
         #function statements:
         self.master.resizable(width=False,height=False);

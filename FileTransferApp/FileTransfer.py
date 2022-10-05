@@ -65,14 +65,13 @@ class FileTransfer(Frame):
         self.entryDestination.delete(0, END)  #The .delete(0, END) will clear the content that is inserted in the Entry widget, this allows the path to be inserted into the Entry widget properly.
         self.entryDestination.insert(0, selectDestDir)  #The .insert method will insert the user selection to the destination_dir Entry widget.
 
-    ##########
     def updateFiles(self):
         source = self.entrySource.get()                 #Get the file path for the source
         destination = self.entryDestination.get()       #Get the file path for the destination
 
-        now = datetime.now()                            #Get the time now
         updatePrompt = self.entryUpdate.get()           #Get the value from user's input into the entryUpdate entry field
         updateHours = int(updatePrompt)                 #Change the user's input to an integer
+        now = datetime.now()                            #Get the time now
         updateTime = now-timedelta(hours=updateHours)   #Calculate a time to look back to check for updates
         
         source_files = os.listdir(source)		#←create a list of all the files in the ‘path’ directory
