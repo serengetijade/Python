@@ -24,7 +24,7 @@ class ClassName(Frame):             #Frame is the Tkinter keyword to declare a p
         self.master = master;        #Create a varaible “master” to pass whatever value is later defined to parameter "master"
         #function statements:
         self.master.resizable(width=False,height=False);
-        self.master.geometry('{}x{}'.format(700, 400));
+        self.master.geometry('{}x{}'.format(500, 300));
         self.master.title("Tkinter Basics!");
         self.master.config(bg='lavender');
 
