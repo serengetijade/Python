@@ -2,7 +2,9 @@
 #
 #Author:        Jade Abreu
 #
-#Purpose:       File Transfer App::
+#Purpose:       Web Page Generator App:
+#               Automatially generate a HTML template with a few basic elements. The template even has notes
+#               to offer basic explanations and provides a framework that can be expanded and added to easily.
 #               -Declare a variable type and value to set an Entry widget's option (textvariable).
 #               -.get() value from Entry widget via a variable and use it in a function
 #               -Pop-ups: Use messagebox with showerror options to display pop-up messages.
