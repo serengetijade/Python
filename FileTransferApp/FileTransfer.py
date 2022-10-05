@@ -2,8 +2,14 @@
 #
 #Author:        Jade Abreu
 #
-#Purpose:       File Transfer App 
-#               
+#Purpose:       File Transfer App:
+#               -Declare a variable type and value to set an Entry widget's option (textvariable).
+#               -Get a value from an Entry widget and use it in a function.
+#               -Use the filedialog method, askdirectory() option to select which location to move files from/to.
+#               -Use os.listdir, os.path.join, and datetime.timestamp(os.getmtime()) to loop through files in a directory
+#               and compare their time of last modification to a given time.
+#               -Use shutil.move to move files that satisfy the condition statement.
+#               -Use a boolean value to 'trigger' if there are no eligible files to move.
 #               The code is heavily noted to serve as future tutorials.
 #
 #Tested OS:     This code was written and tested to work with Windows 11.
@@ -13,9 +19,6 @@ from tkinter import *
 import tkinter.filedialog
 import os, shutil, datetime, time
 from datetime import datetime, timedelta
-
-#import FileTransferGUI;
-#import FileTransferFunctions;
 
 class FileTransfer(Frame):
     def __init__(self, master):
@@ -35,7 +38,7 @@ class FileTransfer(Frame):
         self.entryDestination = Entry(width=75)
         self.entryDestination.grid(row=1, column=1, columnspan=2, padx=(20,10), pady=(15,10))
 
-        #Update:        
+        #Update Button and Entry(with textvaraible option):        
         self.btnUpdate = Button(text="Update", width=20, command=self.updateFiles)
         self.btnUpdate.grid(row=2, column=0, padx=(20,10), pady=(0, 15))
 
