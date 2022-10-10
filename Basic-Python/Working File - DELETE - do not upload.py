@@ -1,26 +1,41 @@
-#ABSTRACTED METHODS:
-from abc import ABC, abstractmethod
+import sqlite3
+"""
+rosterList = (('Jean-Baptist Zort', 'Human', 122), ('Korben Dallas', 'Meat Popsicle', 100), ('Ak\'not', 'Mangalore', -5))
+species = 'Human';
 
-class parentClass1(ABC):  #ABC stands for Abstract Base Class
-    def paySlip(self, amount):
-        print("Your purchase amount: ", amount)
-    @abstractmethod                     #"@abstractmethod" tells Python that what follows is an abstrac method.
-    def payment(self, amount):          #Define the abstract method. An abstract method is defined, but NOT implimented here. 
-        pass                            #pass means that it will not be implemented (it will not run)7 unless called (by another function)
-        
-class DebitCardPayment(parentClass1):   #Define a child class to (parentClass)
-    def payment(self, amount):          #(Re)define the abstract class in order to use it: 
-        print("Your purchase amount of {} exceeded your $100 limit.".format(amount))    #Define HOW to implement the payment method (from the parent class, parentClass) when this instance is used. 
+with sqlite3.connect(':memory:') as connection:
+    conn = connection.cursor()
+    conn.execute("CREATE TABLE IF NOT EXISTS table_Roster(\
+        Full_Name TEXT PRIMARY KEY NOT NULL, \
+        Species TEXT, \
+        IQ INT)")
+    conn.executemany("INSERT INTO table_Roster VALUES(?,?,?)",rosterList)
+    #Update the DB
+    conn.execute("UPDATE table_Roster SET Species ='Human' WHERE Full_Name='Korben Dallas'")
+    #Query the DB
+    conn.execute("SELECT Full_Name, IQ FROM table_Roster WHERE Species ='{}'".format(species))
+    rosterQuery = conn.fetchall()
+    for item in rosterQuery:
+        queryString = "Name: {}, IQ: {}".format(item[0], str(item[1]))
+        print(queryString)      #Needs to be WITHIN the for loop or it will only print the LAST query result.
+conn.close()
+"""
+import datetime;
+import time;
 
-class CreditCardPayment(parentClass1):  Define a child class to (parentClass)
-    def payment(self, amount):          #(Re)define the abstract class in order to use it: 
-        print("Your credit card payment amount: ", amount)  #Define HOW to implement the payment method (from the parent class, parentClass) when this instance is used.
+Local = datetime.datetime.now()
+print("The current time is: " + Local.strftime("%I")+":"+Local.strftime("%M")+" "+Local.strftime("%p")+", "+time.tzname[0])
 
-class CashPayment(parentClass1):        #Define a child class to (parentClass)
-    def payment(self, amount):          #(Re)define the abstract class in order to use it: 
-        print("Your cash payment amount: ", amount) #Define HOW to implement the payment method (from the parent class, parentClass) when this instance is used.
+London = time.gmtime();
+print("The time in London is: " + str(London.tm_hour) + ":" + str(London.tm_min))
+if 9 < London.tm_hour < 17:
+    print("The London office is open")
+else:
+    print("The London office is closed")
 
-#Create in instance of the DebitCardPayment (child) class, then use that instance to call functions (passing in a value to 'amount')
-obj = DebitCardPayment()                #Instantiate an instance of the 'DebitCardPayment()' class. As part of it's definition, it 
-obj.paySlip("$400")                     #With obj (an instance of DebitCardPayment) run the function 'paySlip' and pass $400 in as the 'amount'.
-obj.payment("400")                      #With obj (an instance of DebitCardPayment) run the function 'payment' and pass $400 in as the 'amount'.
+#New York is 5 hours BEHIND London
+print("The time in NYC is: " + str((London.tm_hour)-5) + ":" + str(London.tm_min))
+if 9 < ((London.tm_hour)-5) < 17:
+    print("The NYC office is open")
+else:
+    print("The NYC office is closed")

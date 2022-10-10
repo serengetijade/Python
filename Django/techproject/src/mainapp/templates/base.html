@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/layout.css'%}">	        	    <!--Source CSS file using dynamic django tags-->
+	<link rel="icon" type="image/x-icon" href="../Images/Icons/">	                            <!--Page icon to display in browser tab-->
+	<script src="../js/jsfileName.js" defer></script> 					                        <!--Source JavaScript file-->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> 	<!--Source jQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>		<!--Source React-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>	<!--Source React DOM-->
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>				<!--Source JSX-->
+	<!--Fonts:-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+	<title>{% block title %}{% endblock %}</Title>												<!--Use django blocks to hold a DTL variable-->
+	<style>
+		html {
+			scroll-behavior: smooth; /*specifies whether to smoothly animate the scroll position, instead of a straight jump*/
+			box-sizing: border-box;  /*include the padding and border in an element's total width and height. Default value: content-box*/
+		}
+	</style> 	<!--If not using a .css stylesheet, put style element at the top of the document-->
+</head>
+<body>
+	<div class="page_container">
+		{% include "navbar.html" %}							<!--include the html contents of the "named file"-->
+
+		<header class="header-title">
+			<h1>{% block header%}{% endblock %}</h1>
+		</header>
+
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+	</div>
+
+	<footer id="block-footer">
+		<p id="footer-right"><a href="#">Terms</a></p>
+		<p id="footer-left">&copy;2018 - The Fictional, Royal Hotels</p>
+	</footer>
+	<script></script> <!--If including any JavaScript, place it at the bottom of the document, before the closing /body tag-->
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}               #may need to adjust the file path to the mainapp directory
+
+{% block title%}Products{% endblock%}
+
+{% block header%}Products{% endblock %}
+
+{% block content %}
+    {% for product in products %}
+        <ul>
+            <li>{{ product.name }}</li>
+        </ul>
+    {% endfor %}
+{% endblock %}
+
+
+<!--This is a new page, it MUST be added to the urls.py file
+1.1) In the urls page, add at the top:
+from django.config.urls import include      #import to reference additional pages.
+1.2) In the urls page, include the path:
+urlpatterns = [
+    #URL syntax: ('pattern to watch for', file.methodName, name="shortcut name")
+    path('', include('products.urls')),
+2) In the app's directory (here 'products') create a urls.py file.
+]-->

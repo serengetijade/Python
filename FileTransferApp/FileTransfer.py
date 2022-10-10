@@ -4,7 +4,7 @@
 #
 #Purpose:       File Transfer App:
 #               -Declare a variable type and value to set an Entry widget's option (textvariable).
-#               -Get a value from an Entry widget and use it in a function.
+#               -.get() value from Entry widget via a variable and use it in a function
 #               -Use the filedialog method, askdirectory() option to select which location to move files from/to.
 #               -Use os.listdir, os.path.join, and datetime.timestamp(os.getmtime()) to loop through files in a directory
 #               and compare their time of last modification to a given time.
@@ -69,6 +69,7 @@ class FileTransfer(Frame):
         source = self.entrySource.get()                 #Get the file path for the source
         destination = self.entryDestination.get()       #Get the file path for the destination
 
+        #.get() value from Entry widget by referencing the variable
         updatePrompt = self.entryUpdate.get()           #Get the value from user's input into the entryUpdate entry field
         updateHours = int(updatePrompt)                 #Change the user's input to an integer
         now = datetime.now()                            #Get the time now

@@ -1,7 +1,20 @@
 #CLASS BASICS
 
-"""
 #DEFINE A CLASS WITH ARGUMENTS
+#Example1
+class ClassName0:                               #start Class Names with a Capital Letter
+    def __init__(self, attributeA, attributeB): #declare "self" and list any attributes
+        self.variableA = attributeA             #attributeA and attributeB are placeholders
+        self.variableB = attributeB             #Create “variableA” and “variableB” to pass whatever value is later defined to parameterA/B
+    #refer to the (future TBD) parameters as the variables defined above
+    def classMethod(abc):                       #In a function definition, name only one parameter
+        print("Hello " + abc.variableA)         #Call multiple parameters by referencing the (variables) name as defined in the Class definition
+
+
+instance1 = ClassName0("Jade", "attributeB")    #Create an instance and pass in the parameter value(s)
+instance1.classMethod()                         #Call the function/method
+
+#Example2
 class className:
     #Define the attributes of the class
     attribute0 = "value"	    #←value may be something like “Name”
@@ -34,8 +47,9 @@ class className2:
     attribute2 = "value"	    #←value may be something like “Password”
     attribute3 = 42	            #←value may be something like “Account#”
 
-    #Define the __init_funcgtion after the class definition        
-    def __init__(self, attribute0, attribute1, attribute2, attribute3):
+    #Define the __init_funcgtion after the class definition
+    #SEE __init__/SELF REVIEW at the bottom of the page
+    def __init__(self, attribute0, attribute1, attribute2, attribute3,**args):
         self.attribute0 = attribute0
         self.attribute1 = attribute1
         self.attribute2 = attribute2
@@ -74,8 +88,6 @@ if __name__ == "__main__":
     x = className3()        #Instantiate the class and name this instance
     print(x.attribute1+"!")
     print("{} {}".format(x.attribute1, x.attribute2))
-
-"""
 
 ##CHILD CLASS POLYMORPHISM
 #parent class
@@ -158,5 +170,18 @@ if __name__ == "__main__":
     virus = Virus();
     print(virus.information());
     print(virus.replication());
-        
 
+
+##__init__/SELF REVIEW
+class ClassName:                                    #start Class Names with a Capital Letter
+    def __init__(self, attributeA, attributeB):     #declare "self" and list any attributes
+        self.variableA = attributeA                 #attributeA and attributeB are placeholders
+        self.variableB = attributeB                 #Create “variableA” and “variableB” to pass whatever value is later defined to parameterA/B
+    #refer to the (future TBD) parameters as the variables defined above
+    def classMethod(abc):                                #In a function definition, name only one parameter
+        print("Hello my name is " + abc.variableA)  #Call multiple parameters by referencing the (variables) name as defined in the Class definition
+
+#Create an instance and pass in the parameter value(s)
+instance1 = ClassName("Jade", "attributeB")
+#Call the function/method
+instance1.classMethod()

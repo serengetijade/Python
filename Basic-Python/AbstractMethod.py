@@ -12,7 +12,7 @@ class DebitCardPayment(parentClass1):   #Define a child class to (parentClass)
     def payment(self, amount):          #(Re)define the abstract class in order to use it: 
         print("Your purchase amount of {} exceeded your $100 limit.".format(amount))    #Define HOW to implement the payment method (from the parent class, parentClass) when this instance is used. 
 
-class CreditCardPayment(parentClass1):  Define a child class to (parentClass)
+class CreditCardPayment(parentClass1):  #Define a child class to (parentClass)
     def payment(self, amount):          #(Re)define the abstract class in order to use it: 
         print("Your credit card payment amount: ", amount)  #Define HOW to implement the payment method (from the parent class, parentClass) when this instance is used.
 
