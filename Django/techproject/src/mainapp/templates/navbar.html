@@ -1,8 +1,8 @@
 <!--included content- this is referenced by 'include "navbar.html"'  written in the base.html doc-->
 <nav>
     <ul class="topnav">
-        <li><a href="#">Royal Hotel</a></li>
+        <li><a href="{% url 'home' %}">Royal Hotel</a></li>
         <li><a href="#">Our Menu</a></li>
-        <li><a href="{% url 'admin_console' %}">Admin Panel</a></li>            #Use tag to call the method
+        <li><a href="{% url 'admin_console' %}">Admin Panel</a></li>        <!--#Use tag to call the method--> <!--Calling the tag name (as defined in the appName/url.py file is a shortcut-->
     </ul>
 </nav>

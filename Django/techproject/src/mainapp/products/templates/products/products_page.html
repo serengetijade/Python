@@ -1,15 +1,34 @@
 {% extends "base.html" %}               #may need to adjust the file path to the mainapp directory
 
-{% block title%}Products{% endblock%}
+{% block title%}Royal Hotels{% endblock%}
 
 {% block header%}Products{% endblock %}
 
 {% block content %}
-    {% for product in products %}
-        <ul>
-            <li>{{ product.name }}</li>
-        </ul>
-    {% endfor %}
+<div class="admin_panel">           <!-- class name is for CSS styling -->
+    <form name="productForm" method="POST" action="">       <!-- an html form tag. The post method is more secure. -->
+        <div class="formObject">
+            {% csrf_token %}  <!-- MUST INCLUDE CSRF token -->
+            <label for="menu_id">Select a product to edit:</label>
+            <select id="menu_id" name="menu" onChange="top.location.href=this.options[this.selectedIndex].value;">
+            <!-- end the js statement with ;. href is a link out. this.options is whatever option that is selected by the user.-->
+            {% for product in products %}   <!--for loop -->
+                <option value="../{{ product.pk }}/details/">{{ product.name }}</option>        <!-- the value of the selected option is the link it's sending to p. "../{{p.pk}}/details/" creates one long url starting with ../ and then {{ product.pk }} means that for each iteration through products, write the primary key number. Then /details/ means to add '/details/' at the end of the url.-->
+            {% endfor %}        <!--end for loop -->
+            </select>
+            <div class="formBtn_container">
+                <a href=""><button type="button" class="btn">Create New Product</button></a>
+                <a href="{% url 'home' %}"><button type="button" class="btn">Logout of Profile</button></a>     <!-- url 'home' calls the url home function within the mainapp's url.py paths named home, which then gets more instructions from mainapp's views.py file to finally go to home.html -->
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
 {% endblock %}
 
 

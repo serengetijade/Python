@@ -1,0 +1,25 @@
+{% extends "base.html" %}               #may need to adjust the file path to the mainapp directory
+
+{% block title%}Royal Hotels{% endblock%}
+
+{% block header%}Product Details{% endblock %}
+
+{% block content %}
+<div class="admin_panel">
+    <form name="productForm" method="POST" action="../details/">    <!-- The action directs to a new folder: go back one directory then into 'details' -->
+        <table>
+            {% csrf_token %}  <!-- MUST INCLUDE CSRF token -->
+            {{ form. non_field_errors }}
+            {{ form.as_table }}     <<!-- This is a feature that allows information to be displayed as a table -->
+        </table>
+        <div class="formBtn_container">
+            <ul>
+                <li><a href="../{{ form.pk }}delete/">DELETE</a></li>        <<!-- Reference form.pk, which is the primary key. Delete is a method -->
+                <li><a href="{% url 'admin_console' %}">CANCEL</a></li>        <<!-- Go to the url.py form and follow the 'admin_console' method there -->
+            </ul>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,20 +1,24 @@
+##Models are class objects that map to a database.
+#Class = a database table
+#An instance of that class = A record (a row) of that table
+
 from django.db import models
 
-#Create a drop down list of otptions- these are specific tuples that will appear
+##Create a drop down list of otptions- these are specific tuples that will appear when the choices option is selected for an attribute in a given class.
 TYPE_CHOICES = {
-    ('appetizers', 'appetizers'),           #The first element in each tuple is the value that will be stored in the database. The second element is displayed by the field’s form widget.
-    ('entrees', 'entrees'),                 #The second element is displayed by the field’s form widget.
+    ('appetizers', 'appetizers'),   #The first element in each tuple is the value that will be stored in the database. The second element is displayed by the field’s form widget.
+    ('entrees', 'entrees'),         #...the second element is displayed by the field’s form widget.
     ('desserts', 'desserts'),
     ('drinks', 'drinks'),           #The last item IS followed by a comma
     }
 
-##Define a class
-class Product(models.Model):                               #name the class 'Product' (remember that general convention is to capitalize class names).'models.Models' is the Parent class which this is inheriting from.
-    #variable = className.fieldType(classAttribute, classAttribute, etc)
-    type = models.CharField(max_length=60, choices=TYPE_CHOICES)              #invoke models, then define the type. 'CharField' is a text string. Its always good to set a max_length. Create a field called 'choices' and inherit the info from 'TYPE_CHOICES'. 
-    name = models.CharField(max_length=60, default="", blank=True, null=False)  #default sets the value as empty. blank=True means the forms that show up on the website can be blank, whereas an option of null=False means in the database null cannot be accepted. 
-    description = models.TextField(max_length=300, default="", blank=True)  #TextField allows for longer inputs.
-    price = models.DecimalField(default=0.00, max_digits=10000 , decimal_places=2)   #DecimalField requires max_digit and decimal_places
+##Define a Model class
+class Product(models.Model):        #name the Model class 'Product' (remember that general convention is to capitalize class names).'models.Models' is the Parent class which this is inheriting from.
+    #Syntax: attribute = models.fieldType(field option, field option, etc)
+    type = models.CharField(max_length=60, choices=TYPE_CHOICES)                    #invoke models, then define the type. 'CharField' is a text string. Its always good to set a max_length. Create a field called 'choices' and inherit the info from 'TYPE_CHOICES'.
+    name = models.CharField(max_length=60, default="", blank=True, null=False)      #default sets the value as empty. blank=True means the forms that show up on the website can be blank, whereas an option of null=False means in the database null cannot be accepted.
+    description = models.TextField(max_length=300, default="", blank=True)          #TextField allows for longer inputs.
+    price = models.DecimalField(default=0.00, max_digits=10000 , decimal_places=2)  #DecimalField requires max_digit and decimal_places
     image = models.CharField(max_length=255, default="", blank=True)
 
     objects = models.Manager()      #define 'objects' as the model Manager. The Manager is what manages the link between the framework and the table.
