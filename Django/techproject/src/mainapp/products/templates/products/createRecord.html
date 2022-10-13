@@ -1,0 +1,24 @@
+{% extends "base.html" %}               #may need to adjust the file path to the mainapp directory
+
+{% block title%}Royal Hotels{% endblock%}
+
+{% block header%}Create a New Product{% endblock %}
+
+{% block content %}
+<div class="admin_panel">
+    <form method="POST" action="{% url 'createRecord' %}">      <!--Create a form whose action is to call the 'createRecord method (as defined in products/views.py)-->
+        <div class="frmObject_container">
+            <!--Cross Site Request Forgery (csrf_token) Protection-->
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_p }}      <!--Reference the context form, as a paragraph tag-->
+        </div>
+        <div class="frmBtn_container">
+            <input type="submit" class="btn" value="Create New Product" name="Save_Item">
+            <!--This submit button then submits all the information put on this form back to the createRecord method (the action) -->
+            <a href="{% url 'admin_console' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

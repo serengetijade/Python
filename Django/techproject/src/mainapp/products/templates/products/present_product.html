@@ -10,13 +10,14 @@
         <table>
             {% csrf_token %}  <!-- MUST INCLUDE CSRF token -->
             {{ form.non_field_errors }}
-            {{ form.as_table }}     <<!-- This is a feature that allows information to be displayed as a table -->
+            {{ form.as_table }}     <!-- This is a feature that allows information to be displayed as a table -->
         </table>
         <div class="formBtn_container">
-            <ul>
-                <li><a href="../{{ form.pk }}delete/">DELETE</a></li>        <<!-- Reference form.pk, which is the primary key. Delete is a method -->
-                <li><a href="{% url 'admin_console' %}">CANCEL</a></li>        <<!-- Go to the url.py form and follow the 'admin_console' method there -->
-            </ul>
+            <input type="submit">       <!-- 'Trigger' the action method of the form-->
+            <div class="frmBtn">
+                <a href="../{{ form.pk }}delete/"><button class="btn" type="button">DELETE</button></a>        <!-- Reference form.pk, which is the primary key. Delete is a method -->
+                <a href="{% url 'admin_console' %}"><button class="btn" type="button">CANCEL</button></a>       <!-- Go to the url.py form and follow the 'admin_console' method there -->
+            </div>
         </div>
     </form>
 </div>

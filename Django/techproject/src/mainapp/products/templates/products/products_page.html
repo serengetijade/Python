@@ -17,7 +17,7 @@
             {% endfor %}        <!--end for loop -->
             </select>
             <div class="formBtn_container">
-                <a href=""><button type="button" class="btn">Create New Product</button></a>
+                <a href="{% url 'createRecord'%}"><button type="button" class="btn">Create New Product</button></a>
                 <a href="{% url 'home' %}"><button type="button" class="btn">Logout of Profile</button></a>     <!-- url 'home' calls the url home function within the mainapp's url.py paths named home, which then gets more instructions from mainapp's views.py file to finally go to home.html -->
             </div>
         </div>
