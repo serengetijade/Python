@@ -6,7 +6,7 @@
 #               -Use user input from and Entry widget as a variable in another function
 #                   -Define a variable type
 #                   -Within the widget, use the option 'text=theVariablesName'
-#                   -Declare another varaible to .get(theVariablesName) value
+#                   -Declare a varaible to .get(theVariablesName) value
 #                   -Note that variable definitions must be local, but you can call on any widget by: className.widgetName.get()
 #               -Assign command option to Buttons
 #               -Change a widget with .configure/.config method
