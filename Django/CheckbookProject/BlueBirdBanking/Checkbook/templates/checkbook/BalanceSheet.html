@@ -30,12 +30,10 @@
 					<td class="center">{{key.Type_of_Transaction}}</td>
 					<td class="left">{{key.Description}}</td>
 					<td class="right">{{key.Amount}}</td>
-					<td class="right">{{total}}</td>	<!--Call the total variable as defined in views.py->
+					<td class="right">{{total}}</td>	<!--Call the total variable as defined in the for loop-->
 				</tr>
-				{% endfor $}
-
+				{% endfor %}
 			</table>
-
 			<br><br>			
 {% endblock %}
 

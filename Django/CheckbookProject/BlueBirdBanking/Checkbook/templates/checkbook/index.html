@@ -9,7 +9,7 @@
         <form method="POST">
             <label id="index-label">Choose Account:</label>
             {% csrf_token %}
-            {{ form.account }}
+            {{ form.account }}      <!--reference the foreign key defined in as a property of the Transaction Model in models.py-->
             <button type="submit">Go to Account</button>
         </form>
     </div>

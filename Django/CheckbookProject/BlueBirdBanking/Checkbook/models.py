@@ -22,6 +22,6 @@ class Transaction(models.Model):
     Type_of_Transaction = models.CharField(max_length=60, choices=transaction_choices)
     Amount = models.DecimalField(default=0.00, max_digits=10000 , decimal_places=2)
     Description = models.TextField(max_length=300, default="", blank=True)
-    Account = models.ForeignKey('Account', on_delete=models.CASCADE)
+    account = models.ForeignKey(Account, on_delete=models.CASCADE)  #Reference the Account class defined above.
     #Object manager:
     Transactions = models.Manager()
