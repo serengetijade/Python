@@ -46,9 +46,9 @@ def transaction(request):
     form = TransactionForm(data=request.POST or None)  # Declare a variable 'form' and equate it to the existing Account form (as defined in forms.py); request.Post or None is the default syntax to take any input from the form and put it into this form.
     if request.method == 'POST':
         if form.is_valid():
-            pk = request.POST['account']
+            pk = request.POST['account']        #Retrieve the 'account' variable as defined in models.py. ('account' is a reference to the foreign key to the Account method, also in models.py)
             form.save()  # Apply save(), a built-in model Manager method to save an object back to the db
-            return balance(request, pk)
+            return balance(request, pk)         #balance is a response method defined above
         #else:
         #    print(form.errors)  # If the form cannot meet the if statement, print the built in method .errors
         #    form = TransactionForm()  # Create an empty version of the form as the variable 'form'.

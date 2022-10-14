@@ -5,13 +5,11 @@
 				<form method="POST">
 					<!--Cross Site Request Forgery (csrf_token) Protection-->
 					{% csrf_token %}
-					{{ form.non_field_errors }}
+					<!--{{ form.non_field_errors }}-->
 					{{ form.as_p }}      <!--Reference the context form, as a paragraph tag-->
 					<button id="new-transaction-button" type="submit" name="Save_Transaction">Add Transaction</button>
-					<!--
-					<a href="{% url 'transaction' %}"><button type="button" class="otherbtn" value="Cancel">Cancel</button></a>
-					-->
+					<br>
+					<a href="{% url 'transaction' %}"><button type="button" class="otherbtn" value="Cancel">Clear Form</button></a>
 				</form>
-				<br>
 			</div>
 	{% endblock %}
