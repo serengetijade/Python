@@ -1,0 +1,15 @@
+{% extends 'checkbook_base.html' %}
+	{% block title%}Add New Transaction{% endblock %}
+	{% block content %}
+			<div class="new-transaction-form">
+				<form method="POST" action="{% url 'transaction'%}"> <!-- Replace this with the Django Form -->
+					<!--Cross Site Request Forgery (csrf_token) Protection-->
+					{% csrf_token %}
+					{{ form.non_field_errors }}
+					{{ form.as_p }}      <!--Reference the context form, as a paragraph tag-->
+					<button id="new-transaction-button" type="submit" name="Save_Transaction">Add Transaction</button>
+					<br>
+					<a href="{% url 'transaction' %}"><button type="button" class="otherbtn" value="Cancel">Cancel</button></a>
+				</form>
+			</div>
+	{% endblock %}

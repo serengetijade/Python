@@ -1,0 +1,41 @@
+{% extends 'checkbook_base.html' %}
+{% block title %}Balance Sheet{% endblock %}
+{% block content %}
+			<div id="all-transactions-form">
+				<form> 
+					<br>
+					<label>Account Holder:</label>
+					<input id="accountholder" type="text" name="accountHolder" value="{{account}}" readonly>
+					<br><br>
+					<label>Current Balance:</label>
+					<input id="balance" type="text" name="currentBalance" value="{{balance}}" readonly>
+					<a href="{% url 'transaction'% }"><button type="button">Add Transaction</button></a>
+				</form>
+				<br><br>
+			</div>
+			<h2>RECENT TRANSACTIONS</h2>
+
+			<table class="table table-responsive" id ="transactions-table"> 
+				<!-- Replace this with the Django populated transactions -->
+				<tr id="headerRow">
+					<th>Date</th>
+					<th>Type</th>
+					<th>Description</th>
+					<th>Amount</th>
+					<th>Balance</th>
+				</tr>
+				{% for key, total in table_contents.items %}
+				<tr>
+					<td class="center">{{key.Date_of_Transaction}}</td>		<!--Call the key.attribute as defined in models.py-->
+					<td class="center">{{key.Type_of_Transaction}}</td>
+					<td class="left">{{key.Description}}</td>
+					<td class="right">{{key.Amount}}</td>
+					<td class="right">{{total}}</td>	<!--Call the total variable as defined in views.py->
+				</tr>
+				{% endfor $}
+
+			</table>
+
+			<br><br>			
+{% endblock %}
+

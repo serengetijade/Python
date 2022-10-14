@@ -20,9 +20,10 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls import include        #import to reference additional pages.
 
 urlpatterns = [
-    #URL syntax: ('pattern to watch for', file.methodName, name="shortcut name")
-    path('', views.home, name="home"),
+    #URL syntax: ('url pattern', views.methodName, name="shortcut name")
+    #URL syntax: ('', include('appName.fileName'))
     path('admin/', admin.site.urls),
+    path('', views.home, name="home"),
     path('', include('products.urls')),         #include anything in the products/url.py file
 ]
 
