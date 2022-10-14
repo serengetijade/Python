@@ -10,9 +10,10 @@
 - [Basic Word Game](https://github.com/serengetijade/Python/tree/main/WordGame)
 
 ####[Django Checkbook Website](https://github.com/serengetijade/Python/tree/main/Django/CheckbookProject)
-![Preview of Djanog Website Project]()
+![Preview of Djanog Website Project](https://raw.githubusercontent.com/serengetijade/Python/main/Django/CheckbookProject/DjangoPreview.jpg)
 
 ####[Web Page Generator](https://github.com/serengetijade/Python/tree/main/WebPageGeneratorApp)
+![Web Page Generator Preview](https://raw.githubusercontent.com/serengetijade/Python/main/WebPageGeneratorApp/WebGeneratorPreview.jpg)
 
 ####[Student Tracking Database App](https://github.com/serengetijade/Python/tree/main/StudentTrackingApp)
 
