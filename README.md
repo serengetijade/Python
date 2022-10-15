@@ -15,10 +15,12 @@ a website made usign the django framework. The banking theme demonstrates code t
 
 #### [Web Page Generator](https://github.com/serengetijade/Python/tree/main/WebPageGeneratorApp)
 a GUI to quickly put up a single page website. Add custom content using entry widgets and variables within the html code. 
+
 ![Web Page Generator Preview](https://raw.githubusercontent.com/serengetijade/Python/main/WebPageGeneratorApp/WebGeneratorPreview.jpg)
 
 #### [Student Tracking Database App](https://github.com/serengetijade/Python/tree/main/StudentTrackingApp)
 add, update, and delete database records from a custom GUI.
+
 ![Student Tracking Preview](https://raw.githubusercontent.com/serengetijade/Python/main/StudentTrackingApp/STPreview.jpg)
 
 #### [File Transfer App](https://github.com/serengetijade/Python/tree/main/FileTransferApp)
