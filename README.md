@@ -1,5 +1,5 @@
 # Python
- This repository is for Python projects.
+ This repository is for Python projects and reference.
 
 ## PROJECTS:
 - [Django Checkbook Website](https://github.com/serengetijade/Python/tree/main/Django/CheckbookProject)
@@ -19,6 +19,7 @@ a GUI to quickly put up a single page website. Add custom content using entry wi
 
 #### [Student Tracking Database App](https://github.com/serengetijade/Python/tree/main/StudentTrackingApp)
 add, update, and delete database records from a custom GUI.
+![Student Tracking Preview](https://github.com/serengetijade/Python/tree/main/StudentTrackingApp/STPreview.jpg)
 
 #### [File Transfer App](https://github.com/serengetijade/Python/tree/main/FileTransferApp)
 a basic app utilizing the os module to select and move files.
