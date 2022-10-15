@@ -19,7 +19,7 @@ a GUI to quickly put up a single page website. Add custom content using entry wi
 
 #### [Student Tracking Database App](https://github.com/serengetijade/Python/tree/main/StudentTrackingApp)
 add, update, and delete database records from a custom GUI.
-![Student Tracking Preview](https://github.com/serengetijade/Python/tree/main/StudentTrackingApp/STPreview.jpg)
+![Student Tracking Preview](https://raw.githubusercontent.com/serengetijade/Python/main/StudentTrackingApp/STPreview.jpg)
 
 #### [File Transfer App](https://github.com/serengetijade/Python/tree/main/FileTransferApp)
 a basic app utilizing the os module to select and move files.
