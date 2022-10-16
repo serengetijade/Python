@@ -32,7 +32,7 @@ showcases various tkinter widgets.
 #### [Basic Word Game](https://github.com/serengetijade/Python/tree/main/WordGame)
 a very basic shell game that shows the use of the random module, if statements, and counters.
 
-## [REFERENCE CODE LIBRARY]()
+## [REFERENCE CODE LIBRARY](https://github.com/serengetijade/Python/tree/main/Basic-Python)
 In addition to the projects, there is a small code library for referencing basic python elements. These examples are heavily noted
 - [Arrays](https://github.com/serengetijade/Python/blob/main/Basic-Python/Arrays.py)
 - [What is an Abstract Method](https://github.com/serengetijade/Python/blob/main/Basic-Python/AbstractMethod.py)
