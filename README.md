@@ -32,20 +32,20 @@ showcases various tkinter widgets.
 #### [Basic Word Game](https://github.com/serengetijade/Python/tree/main/WordGame)
 a very basic shell game that shows the use of the random module, if statements, and counters.
 
-## [REFERENCE CODE LIBRARY]()
+## [REFERENCE CODE LIBRARY](https://github.com/serengetijade/Python/tree/main/Basic-Python)
 In addition to the projects, there is a small code library for referencing basic python elements. These examples are heavily noted
+- [Basics](https://github.com/serengetijade/Python/blob/main/Basic-Python/BasicPython.py) Start here for the fundamentals.
 - [Arrays](https://github.com/serengetijade/Python/blob/main/Basic-Python/Arrays.py)
-- [What is an Abstract Method](https://github.com/serengetijade/Python/blob/main/Basic-Python/AbstractMethod.py)
-- [Basics - all the fundamentals](https://github.com/serengetijade/Python/blob/main/Basic-Python/BasicPython.py)
+- [Abstract Method](https://github.com/serengetijade/Python/blob/main/Basic-Python/AbstractMethod.py) What is an abstract method and how to use it.
 - [Classes](https://github.com/serengetijade/Python/blob/main/Basic-Python/Class.py)
-- [Creating and Importing Custom Modules](https://github.com/serengetijade/Python/blob/main/Basic-Python/createdModule.py)
+- [Custom Modules](https://github.com/serengetijade/Python/blob/main/Basic-Python/createdModule.py) How to create and import custom modules.
 - [Dunder Method](https://github.com/serengetijade/Python/blob/main/Basic-Python/DunderMethod.py)
 - [Lambda Functions](https://github.com/serengetijade/Python/blob/main/Basic-Python/LambdaFunctions.py)
 - [OS Module](https://github.com/serengetijade/Python/blob/main/Basic-Python/OSmodule.py)
 - [Protected and Private](https://github.com/serengetijade/Python/blob/main/Basic-Python/Protected_and_Private.py)
 - [SQLite with Python](https://github.com/serengetijade/Python/blob/main/Basic-Python/SQLite.py)
-- [Tkinter Input Form using variables](https://github.com/serengetijade/Python/blob/main/Basic-Python/Tkinter1-InputForm-with-Variables.py)
-- [Tkinter GUI with Buttons, Entry, Listbox, and Scrollbar Widgets](https://github.com/serengetijade/Python/blob/main/Basic-Python/Tkinter2-Buttons-Entry-Listbox-Scrollbar.py)
+- [Tkinter Input Form and variables](https://github.com/serengetijade/Python/blob/main/Basic-Python/Tkinter1-InputForm-with-Variables.py) Assign variables to the values of an input form and use it elsewhere in the code. 
+- [Tkinter GUI](https://github.com/serengetijade/Python/blob/main/Basic-Python/Tkinter2-Buttons-Entry-Listbox-Scrollbar.py) See the basics of using tkinter Buttons, Entry, Listbox, and Scrollbar Widgets.
 - [Try Catch Block Basics](https://github.com/serengetijade/Python/blob/main/Basic-Python/TryCatch.py)
 
 >"There are a great many people in the country today, who through no fault of their own, are sane."
