@@ -26,6 +26,8 @@ def createAccount(request):
     }
     return render(request, 'checkbook/CreatenewAccount.html', content)
 
+
+## READ (AND DISPLAY TABLE CONTENTS)
 def balance(request,pk):
     account = get_object_or_404(Account, pk=pk)     #Retrieve the requested account using its pk(primary key)
     transactions = Transaction.Transactions.filter(account=pk)  #Retrieve all of that accounts' transactions via the model Manager. Apply the filter option, filter by pk.
@@ -38,7 +40,7 @@ def balance(request,pk):
         else:
             current_total -= t.Amount   #If type is a withdrawl (the only other option), subtract the amount from balance
             table_contents.update({t:current_total})    #Add transaction and total to the dictionary
-    #Create a variable to pass account, account total balance, and transaction ifo to the template:
+    #Create a variable to pass account, account total balance, and transaction info to the template:
     content = {'account':account, 'table_contents':table_contents, 'balance':current_total}
     return render(request, 'checkbook/BalanceSheet.html',content)
 
