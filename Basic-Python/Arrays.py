@@ -24,10 +24,8 @@ print('''
 Iterate through each element within an object:''');
 for i in variableArray:
     print(i);
+#Count() returns how many times a given 'value' appears within an object:
 variableCount = variableArray.count("object2");
-
-print('''
-Count() returns how many times a given 'value' appears within an object:''');
 print(variableCount);
 
 print('''
