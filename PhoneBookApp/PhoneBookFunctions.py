@@ -14,7 +14,7 @@
 #                   -Update table with (new) phone and/or email Entry values
 #               -Declare an event, use the .curselection()[0] option, and .get() method to get the user's selection. 
 #                   -Get record values for the user's selection and insert them in the Entry widget.
-#               -Require a user to fill out all Entry widgets or else propmpt a pop-up messagebox.
+#               -Require a user to fill out all Entry widgets or else prompt a pop-up messagebox.
 #               -Pop-ups: Use messagebox with showerror and showinfo options to display pop-up messages.
 #
 #Tested OS:     This code was written and tested to work with Windows 11.
