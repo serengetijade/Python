@@ -24,7 +24,7 @@ Specific tasks were assigned by the sprint leader, to be completed within a cert
 - Discord for chat and troubleshooting
 
 # Code Summary
-![CRUD](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/readme/GameHoardCRUD.gif)
+![CRUD](https://github.com/serengetijade/Python/blob/main/DjangoGameHoard/GameHoard/readme/GameHoardCRUD.gif)
 
 ## Index Page
 The [index (home) page](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/templates/GameHoard/GH_index.html) is where users can create a database record for a game in their collection, access a link to another page to edit it, view records in the WishList DB, view rendered beautifulsoup content, and view rendered API content. 
@@ -102,7 +102,7 @@ https://github.com/serengetijade/Python/blob/291c7d52b0fa774df14bd8f3e7248e604a3
 ## BeautifulSoup Web Scraping
 BeautifulSoup source content credit: [BoardGameQuest](https://www.boardgamequest.com/category/game-reviews/)
 
-![bsoup Display](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/readme/soup1.jpg)
+![bsoup Display](https://github.com/serengetijade/Python/blob/main/DjangoGameHoard/GameHoard/readme/soup1.jpg)
 
 To provide dynamic content on the page, beautifulsoup was used to scrape a popular board game review page. The results of the list were iterated through and rendered as html objects. 
 https://github.com/serengetijade/Python/blob/7e2d5f7e8109f7938026b49a4f443db4614ee7a2/DjangoGameHoard/GameHoard/views.py#L115-L141
@@ -110,11 +110,11 @@ https://github.com/serengetijade/Python/blob/7e2d5f7e8109f7938026b49a4f443db4614
 ## API Requests
 API source content credit:  [CheapShark](https://apidocs.cheapshark.com/#c33f57dd-3bb3-3b1f-c454-08cab413a115)
 
-![API Display](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/readme/api1.jpg)
+![API Display](https://github.com/serengetijade/Python/blob/main/DjangoGameHoard/GameHoard/readme/api1.jpg)
 Another source for dynamic content is by using an application programming interface to request data from a website. The returned request was parsed into a dictionary, which was then iterated through and rendered as html objects. 
 https://github.com/serengetijade/Python/blob/7e2d5f7e8109f7938026b49a4f443db4614ee7a2/DjangoGameHoard/GameHoard/views.py#L115-L141
 
-![Favorite](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/readme/favoriteAPI.gif)
+![Favorite](https://github.com/serengetijade/Python/blob/main/DjangoGameHoard/GameHoard/readme/favoriteAPI.gif)
 
 ## Download Instructions
 <details><summary>Requirements</summary>
