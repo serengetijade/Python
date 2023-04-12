@@ -51,7 +51,6 @@ By using the django include tag, it's like this content is part of the [GH_index
 Therefore, the form and the function to create a record, is defined as part of the GH_index function in [views.py](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/views.py).
 JavaScript is used to show and hide this element as a modal pop up, see  [gameHoard.js](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/static/js/gameHoard.js).
 
-https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/655a0c33e7d9c7c2a48e118493d47370c074dcac/templates/GameHoard/GH_create.html#L12-L23
 https://github.com/serengetijade/Python/blob/7e2d5f7e8109f7938026b49a4f443db4614ee7a2/DjangoGameHoard/GameHoard/templates/GameHoard/GH_create.html#L12-L23
 
 
@@ -98,7 +97,7 @@ https://github.com/serengetijade/Python/blob/7e2d5f7e8109f7938026b49a4f443db4614
 When each WishList record is read and rendered from the database, a form is created using each record's primary key and it is assigned an action that will call the delete_wishlist function in [views.py](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/views.py).
 https://github.com/serengetijade/Python/blob/7e2d5f7e8109f7938026b49a4f443db4614ee7a2/DjangoGameHoard/GameHoard/templates/GameHoard/GH_read_wishlist.html#L3-L19
 
-https://github.com/serengetijade/Python/blob/7e2d5f7e8109f7938026b49a4f443db4614ee7a2/DjangoGameHoard/GameHoard/views.py#L240-L245
+https://github.com/serengetijade/Python/blob/291c7d52b0fa774df14bd8f3e7248e604a37f7c0/DjangoGameHoard/GameHoard/views.py#L235-L240
 
 ## BeautifulSoup Web Scraping
 BeautifulSoup source content credit: [BoardGameQuest](https://www.boardgamequest.com/category/game-reviews/)
