@@ -25,7 +25,7 @@ A GUI to quickly put up a single page website. Add custom content using entry wi
 ![Web Page Generator Preview](https://raw.githubusercontent.com/serengetijade/Python/main/WebPageGeneratorApp/WebGeneratorPreview.jpg)
 
 #### [Student Tracking Database App](https://github.com/serengetijade/Python/tree/main/StudentTrackingApp)
-Add, update, and delete database records from a custom GUI.
+Add, update, and delete database records from a custom GUI made with the Tkinter module.
 
 ![Student Tracking Preview](https://raw.githubusercontent.com/serengetijade/Python/main/StudentTrackingApp/STPreview.jpg)
 
