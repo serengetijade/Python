@@ -36,6 +36,7 @@ https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/184300
 - API content is passed in from the api and apiQuery functions.
 
 https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/c8685717c233ee5333e5dc06daf7c79c938c2228/views.py#L34-L69
+https://github.com/serengetijade/Python/blob/162d12b282ae3ee1695448d074b881d6e9371462/DjangoGameHoard/GameHoard/views.py#L34-L69
 
 ## Models
 Two databases [models](https://github.com/serengetijade/tree/main/DjangoGameHoard/GameHoard/blob/main/models.py) were created for this project: 
