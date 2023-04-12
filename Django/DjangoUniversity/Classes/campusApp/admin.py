@@ -3,3 +3,6 @@ from .models import UniversityCampus
 
 # Register your models here.
 admin.site.register(UniversityCampus)
+
+#Admin username: Jade
+#Admin password: admin123
