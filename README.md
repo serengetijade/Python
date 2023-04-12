@@ -34,13 +34,13 @@ A basic app utilizing the os module to select and move files.
 
 #### [Tkinter Phone Book App](https://github.com/serengetijade/Python/tree/main/PhoneBookApp)
 This project demonstrates OOP and the Tkinter GUI module.
-    - Tkinter parent and child class relationships.
-    - Use winfo methods to calculate the x any y coordinates to center the Frame in the user's viewscreen, by first assigning x and y as integer variables.
-    - Use SQL to: Create a DB and table, Insert records into the table, Count the number of records, Update table with (new) phone and/or email Entry values
-    - Declare an event, use the .curselection()[0] option, and .get() method to get the user's selection. 
-    - Get record values for the user's selection and insert them in the Entry widget.
-    - Require a user to fill out all Entry widgets or else prompt a pop-up messagebox.
-    - Pop-ups: Use messagebox with showerror and showinfo options to display pop-up messages.
+- Tkinter parent and child class relationships.
+- Use winfo methods to calculate the x any y coordinates to center the Frame in the user's viewscreen, by first assigning x and y as integer variables.
+- Use SQL to: Create a DB and table, Insert records into the table, Count the number of records, Update table with (new) phone and/or email Entry values
+- Declare an event, use the .curselection()[0] option, and .get() method to get the user's selection. 
+- Get record values for the user's selection and insert them in the Entry widget.
+- Require a user to fill out all Entry widgets or else prompt a pop-up messagebox.
+- Pop-ups: Use messagebox with showerror and showinfo options to display pop-up messages.
 
 #### [Basic Word Game](https://github.com/serengetijade/Python/tree/main/WordGame)
 A very basic shell game that shows the use of the random module, if statements, and counters. This command line game asks the player a series of questions and based on their answers, updates a counter. At the end of the game, the counter results determine which message (win or lose) is displayed. 
