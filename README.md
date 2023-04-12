@@ -36,7 +36,7 @@ A basic app utilizing the os module to select and move files.
 Showcases various tkinter widgets.
 
 #### [Basic Word Game](https://github.com/serengetijade/Python/tree/main/WordGame)
-A very basic shell game that shows the use of the random module, if statements, and counters.
+A very basic shell game that shows the use of the random module, if statements, and counters. This command line game asks the player a series of questions and based on their answers, updates a counter. At the end of the game, the counter results determine which message (win or lose) is displayed. 
 
 ## [REFERENCE CODE LIBRARY](https://github.com/serengetijade/Python/tree/main/Basic-Python)
 In addition to the projects, there is a small code library for referencing basic python elements. These examples are heavily noted
