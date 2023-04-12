@@ -1,5 +1,7 @@
 from django.db import models
 
+#   This project is a small part of a larger project - it is a short excercize to create classes and define a model manager.
+
 class UniversityCampus(models.Model):
     campus_id = models.IntegerField(primary_key=True)
     campus_name = models.CharField(max_length=60, default="", blank=True, null=False)
